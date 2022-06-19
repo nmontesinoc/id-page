@@ -1,0 +1,14 @@
+Aquesta carpeta conté l'script de creació del model. Per a poder-ho crear, situeu-vos a la mateixa carpeta de treball
+que s'ha definit a l'execució de getTraces i correu la següent comanda:
+    python3 Cerca.py > outputCerca & disown
+
+D'aquesta manera, es realitzarà la cerca de manera desatesa, tot deixant els resultats a l'arxiu "outputCerca". Tingueu
+en compte que per tal de poder fer la cerca haureu d'instal·lar alguns mòduls de Python. Per a això, correu les seguent
+comandes:
+    pip3 install gensim==4.1.2 nltk==3.7
+
+També haureu d'instal·lar un mòdul de nltk. Per a això, obriu una terminal de Python3 (es possible fer-ho mitjançant 
+la comanda 'python3' a Ubuntu) i correu les seguents comandes:
+    import nltk
+    nltk.download('punkt')
+    exit()

@@ -1,0 +1,12 @@
+version: '3'
+services:
+        gettraces-ip:
+                image: "gettraces:ip"
+                volumes:
+                      - "/home/nicolas/getTraces/file:/root/file"
+                      - "/home/nicolas/getTraces/dumps:/root/dumps"
+                      - "/home/nicolas/getTraces/tmp:/root/tmp"
+                      - "/home/nicolas/getTraces/done:/root/done"
+                      - "/home/nicolas/getTraces/down:/root/down"
+                      - "/home/nicolas/getTraces/third:/root/third"
+                shm_size: '2gb'

@@ -1,0 +1,33 @@
+Si no teniu Docker instalat, haureu de fer-ho abans de continuar les instruccions. A Ubuntu es pot
+fer amb la comanda:
+    sudo snap install docker
+
+En cas que l'hàgiu acabat d'instalar i no tingueu els permissos de Docker configurats, haureu de fer totes les comandes de Docker
+com a root o amb "sudo"
+
+Per a poder crear l'imatge de Docker, situeu-vos al directori "getTraces" i correu la següent comanda:
+    docker build -t gettraces:ip .
+
+Un cop fet això, situeu-vos a la carpeta que contendrà els resultats de l'execució i correu la següent comanda:
+    mkdir file dumps tmp done down third
+
+Després, copieu l'arxiu "docker-compose.yml" al directori de treball. Haureu de canviar les línies de 6 a 11, 
+substituïnt "/home/nicolas/getTraces" pel vostre directori de treball. També haureu de crear l'arxiu
+file/targets.csv que contindrà les pàgines a analitzar.
+
+Finalment, per a iniciar l'execució de l'eina, situeu-vos al directori de treball i correu la següent comanda:
+    docker-compose up -d --scale gettraces-ip=12 gettraces-ip
+
+Tingueu en compte que d'aquesta manera s'instanciaràn dotze contenidors. Durant l'anàlisi s'ha comprovat de manera
+no formal que és el nombre óptim per a una màquina amb CPU Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz i 6 GB de memòria
+RAM, però s'hauria d'adaptar per a cada màquina.
+
+
+
+
+
+Si voleu estalviar-vos la creació de l'imatge, podeu descarregar a DockerHub la creada per mi. Per a això, correu la comanda:
+    docker pull nmontesinoc/gettraces:ip
+
+Tingueu en compte que d'aquesta manera haureu de modificar l'arxiu "docker-compose.yml", canviant el nom de l'imatge
+per "nmontesinoc/gettraces:ip".

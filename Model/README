@@ -1,0 +1,7 @@
+Aquesta carpeta conté l'script de creació del model. Per a poder-ho crear, situeu-vos a la mateixa carpeta de treball
+que s'ha definit a l'execució de getTraces i correu la següent comanda:
+    python3 Model.py & disown
+
+D'aquesta manera, es crearà el model de manera desatesa. Tingueu en compte que per tal de poder crear el model haureu
+d'instal·lar el paquet de Python "gensim", en la seva versió 4.1.2. Per a això, correu la següent comanda:
+    pip3 install gensim==4.1.2

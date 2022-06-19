@@ -1,0 +1,8 @@
+Aquesta carpeta conté tots els arxius que s'han desenvolupat per crear les tres eines i per l'anàlisi de resultats.
+
+-La carpeta "Cerca" conté l'script de l'eina de cerca.
+-La carpeta "getTraces" conté els arxius necessaris per a crear l'imatge de Docker necessària per a poder crear l'eina d'obtenció de traces.
+-La carpeta "Model" conté l'script de l'eina de creació del model.
+-La carpeta "Scripts R" conté diversos scripts que s'han utilitzat per a desenvolupar l'anàlisi de resultats.
+
+Per a més informació, si us plau, visualitzeu els arxius "README" continguts a cada carpeta.

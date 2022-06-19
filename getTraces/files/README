@@ -1,0 +1,5 @@
+Aquesta carpeta consisteix d'arxius neecessaris per a la correcta creació de l'imatge.
+    -chromedriver: És l'arxiu que connecta Google Chrome i Selenium
+    -getTraces.py: És l'script de Python desenvolupat.
+    -google-chrome-stable_current_amd64.deb: És l'arxiu d'instal·lació de Google Chrome.
+    -startingScript.sh: És un script en bash que executa Xvfb (necessari per a poder obrir Google Chrome sense cap pantalla) i l'script de Python.

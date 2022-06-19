@@ -1,0 +1,19 @@
+Aquesta carpeta conté scripts programats en R que s'han utilitzat per a fer algunes anàlisi de resultat. Per a poder executar-los,
+haureu de còrrer la comanda:
+    Rscript <nomscript>.R
+
+L'script "precisioponderada.R" calcula, a partir de la sortida de l'eina de cerca i el llistat Trancolist que s'ha utilitzat, la precisió
+ponderada que s'ha assolit. Necessita la sortida de l'eina de cerca amb nom "output" i el llistat amb nom "targets.csv".
+
+Pel que fa als scripts "down<nombre>dataset.R" calculen les pàgines que hi son presents a la i-ena execució i no a les passades. Per a poder-se
+executar, necessita la sortida de la i-ena execució i les anteriors amb nom "primeroutput", "segonoutput", "terceroutput", "quartoutput",
+"cinqueoutput", "siseoutput" i "seteoutput". Abans de poder-se executar, s'haurà de treure a ma les quatre darreres línies dels arxius (les que
+mostren els nombres d'encert i percentatge de precisió global).
+
+Per a poder executar els scripts, necessitareu instalar el paquet r-base. A Ubuntu es pot fer mitjançant la comanda:
+    apt install r-base
+
+També necessitareu instalar el modul de R "sqldf". Per a això, obriu un terminal de R (es possible fer-ho mitjançant la comanda 'R'
+a Ubuntu) i executeu:
+    install.packages("sqldf")
+    quit()
