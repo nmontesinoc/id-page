@@ -2,6 +2,10 @@ Aquesta carpeta conté l'script de creació del model. Per a poder-ho crear, sit
 que s'ha definit a l'execució de getTraces i correu la següent comanda:
     python3 Model.py & disown
 
+Per defecte, l'eina busca un únic dataset al directori ./third/. En cas que es vulgui afegir més datasets, s'haurà
+de declarar a la línia cinc de l'script. És necessari posar la barra final del directori. Per exemple:
+    dirs = ['./third/', './third2/']
+
 D'aquesta manera, es crearà el model de manera desatesa. Tingueu en compte que per tal de poder crear el model haureu
 d'instal·lar el paquet de Python "gensim", en la seva versió 4.1.2. Per a això, correu la següent comanda:
     pip3 install gensim==4.1.2

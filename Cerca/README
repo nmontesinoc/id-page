@@ -1,5 +1,5 @@
 Aquesta carpeta conté l'script de creació del model. Per a poder-ho crear, situeu-vos a la mateixa carpeta de treball
-que s'ha definit a l'execució de getTraces i correu la següent comanda:
+que s'ha definit a l'execució de getTraces (la que conté la carpeta "third") i correu la següent comanda:
     python3 Cerca.py > outputCerca & disown
 
 D'aquesta manera, es realitzarà la cerca de manera desatesa, tot deixant els resultats a l'arxiu "outputCerca". Tingueu

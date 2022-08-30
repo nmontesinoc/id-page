@@ -1,20 +1,22 @@
 # Càrrega dels mòduls necessaris per al bon funcionament de l'eina
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 import os
-# Declaració de la ruta on son els arxius .third
-dir = './third/'
+# Declaració de les rutes on son els arxius .third
+dirs = ['./third/']
 # Declaració de les estructures de dades on es bolcaràn els noms i contingut dels arxius .third
 tags = list()
 data = list()
+# Per a cada dataset
+for dir in dirs:
 # Per a cada arxiu .third, s'incorpora el seu nom a l'estructura "tags" i el seu contingut a l'estructura "data"
-for file in os.listdir(dir):
-    webpage = os.path.splitext(file)[0]
-    tags.append(webpage)
-    f = os.open("./third/"+webpage+".third", os.O_RDONLY)
-    aux = os.read(f, os.path.getsize(f))
-    aux = str(aux, 'utf-8')
-    os.close(f)
-    data.append(aux)
+    for file in os.listdir(dir):
+        webpage = os.path.splitext(file)[0]
+        tags.append(webpage)
+        f = os.open(dir+file, os.O_RDONLY)
+        aux = os.read(f, os.path.getsize(f))
+        aux = str(aux, 'utf-8')
+        os.close(f)
+        data.append(aux)
 # A partir de les estructures "tags" i "data", es crea una estructura "tagged_data" que conté un TaggedDocument per arxiu .third
 tagged_data = []
 for i in enumerate(data):
